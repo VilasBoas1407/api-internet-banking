@@ -29,12 +29,22 @@ namespace api_internet_banking.Utils
 
         public  bool ValidateToken(string authToken)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var validationParameters = GetValidationParameters();
+            try
+            {
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var validationParameters = GetValidationParameters();
 
-            SecurityToken validatedToken;
-            System.Security.Principal.IPrincipal principal = tokenHandler.ValidateToken(authToken, validationParameters, out validatedToken);
-            return true;
+                SecurityToken validatedToken;
+                System.Security.Principal.IPrincipal principal = tokenHandler.ValidateToken(authToken, validationParameters, out validatedToken);
+                if (principal.Identity.IsAuthenticated)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         private static TokenValidationParameters GetValidationParameters()

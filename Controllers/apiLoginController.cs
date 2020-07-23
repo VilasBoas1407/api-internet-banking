@@ -81,5 +81,15 @@ namespace api_internet_banking.Controllers
                 return Request.CreateResponse(HttpStatusCode.BadRequest, new { message = err });
             }
         }
+
+        [Route("ValidToken")]
+        [HttpGet]
+        public bool ValidToken(string token)
+        {
+            TokenService t = new TokenService();
+            bool ret = t.ValidateToken(token);
+
+            return ret;
+        }
     }
 }
