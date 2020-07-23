@@ -20,5 +20,19 @@ namespace api_internet_banking.Models
             return User;
 
         }
+
+        public void Register (TB_IB_USUARIO UserData)
+        {
+            try
+            {
+                db.TB_IB_USUARIO.Add(UserData);
+                db.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
+        }
     }
 }
