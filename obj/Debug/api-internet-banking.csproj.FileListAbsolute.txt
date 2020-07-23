@@ -69,3 +69,11 @@ D:\Projetos\app-internet-banking\backend\api-internet-banking\obj\Debug\api-inte
 D:\Projetos\app-internet-banking\backend\api-internet-banking\obj\Debug\api-internet-banking.csproj.CopyComplete
 D:\Projetos\app-internet-banking\backend\api-internet-banking\obj\Debug\api-internet-banking.dll
 D:\Projetos\app-internet-banking\backend\api-internet-banking\obj\Debug\api-internet-banking.pdb
+D:\Projetos\app-internet-banking\backend\api-internet-banking\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projetos\app-internet-banking\backend\api-internet-banking\bin\Microsoft.IdentityModel.Logging.dll
+D:\Projetos\app-internet-banking\backend\api-internet-banking\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Projetos\app-internet-banking\backend\api-internet-banking\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Projetos\app-internet-banking\backend\api-internet-banking\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Projetos\app-internet-banking\backend\api-internet-banking\bin\Microsoft.IdentityModel.Logging.xml
+D:\Projetos\app-internet-banking\backend\api-internet-banking\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Projetos\app-internet-banking\backend\api-internet-banking\bin\System.IdentityModel.Tokens.Jwt.xml

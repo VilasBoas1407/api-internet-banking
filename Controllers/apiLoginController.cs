@@ -9,10 +9,12 @@ using System.Web.Http;
 
 namespace api_internet_banking.Controllers
 {
+    [RoutePrefix("api/user")]
     public class apiLoginController : ApiController
     {
         UtilsController util = new UtilsController();
-        [Route ("user/doLogin")]
+
+        [Route ("doLogin")]
         [HttpGet]
         public HttpResponseMessage doLogin(string DS_EMAIL, string DS_SENHA)
         {
@@ -23,23 +25,21 @@ namespace api_internet_banking.Controllers
                     DS_SENHA = util.CalculateSHA1(DS_SENHA);
                     TB_IB_USUARIO User = new TB_IB_USUARIO();
                     Login l = new Login();
-
+                    TokenService t = new TokenService();
                     User = l.DoLogin(DS_EMAIL, DS_SENHA);
                     
                     if(User != null)
-                        return Request.CreateResponse(HttpStatusCode.OK, new { valid = true, User });
+                    {
+                         string token = t.GenerateToken(User);
+                         return Request.CreateResponse(HttpStatusCode.OK, new { valid = true, userData = User, token });
+                    }
+                        
                     else
                         return Request.CreateResponse(HttpStatusCode.OK, new { valid = false, message = "Usuário ou senha inválidos!"});
                 }
                 else
                 {
-                    string InvalidFields = "";
-                    foreach(string key in ModelState.Keys)
-                    {
-                        if (key == null)
-                            InvalidFields += ' ' + key;
-                    }
-                    return Request.CreateResponse(HttpStatusCode.OK, new { valid = "Por favor preencha os seguintes campos :" + InvalidFields });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { valid = "Por favor preencha todos os campos!" });
                 }
             }
             catch(Exception err)
