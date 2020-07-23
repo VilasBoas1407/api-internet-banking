@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_INTERNET_BANKINGModelStoreContainer" CdmEntityContainer="DB_INTERNET_BANKINGEntities">
+    <EntitySetMapping Name="TB_IB_USUARIO">
+      <EntityTypeMapping TypeName="DB_INTERNET_BANKINGModel.TB_IB_USUARIO">
+        <MappingFragment StoreEntitySet="TB_IB_USUARIO">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NR_CPF" ColumnName="NR_CPF" />
+          <ScalarProperty Name="DS_NOME" ColumnName="DS_NOME" />
+          <ScalarProperty Name="DS_EMAIL" ColumnName="DS_EMAIL" />
+          <ScalarProperty Name="DS_SENHA" ColumnName="DS_SENHA" />
+          <ScalarProperty Name="DS_PAIS" ColumnName="DS_PAIS" />
+          <ScalarProperty Name="DS_ESTADO" ColumnName="DS_ESTADO" />
+          <ScalarProperty Name="DS_CIDADE" ColumnName="DS_CIDADE" />
+          <ScalarProperty Name="DS_ENDERECO" ColumnName="DS_ENDERECO" />
+          <ScalarProperty Name="NR_CASA" ColumnName="NR_CASA" />
+          <ScalarProperty Name="DS_COMPLEMENTO" ColumnName="DS_COMPLEMENTO" />
+          <ScalarProperty Name="NR_CEP" ColumnName="NR_CEP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
