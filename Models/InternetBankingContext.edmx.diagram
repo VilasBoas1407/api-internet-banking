@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="7b1835b24f394b568f4df93f447b62a5" Name="Diagram1">
         <EntityTypeShape EntityType="DB_INTERNET_BANKINGModel.TB_IB_USUARIO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INTERNET_BANKINGModel.TB_IB_HISTORICO_ACESSO" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

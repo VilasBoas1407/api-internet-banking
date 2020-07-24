@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DB_INTERNET_BANKINGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INTERNET_BANKING.dbo.TB_IB_HISTORICO_ACESSO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TB_IB_HISTORICO_ACESSO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+      <PropertyRef Name="DT_ACESSO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="int" Nullable="false" />
+    <Property Name="DT_ACESSO" Type="date" Nullable="false" />
+  </EntityType>
   <EntityType Name="TB_IB_USUARIO">
     <Key>
       <PropertyRef Name="ID_USUARIO" />
@@ -19,5 +29,11 @@
   </EntityType>
   <EntityContainer Name="DB_INTERNET_BANKINGModelStoreContainer">
     <EntitySet Name="TB_IB_USUARIO" EntityType="Self.TB_IB_USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_IB_HISTORICO_ACESSO" EntityType="Self.TB_IB_HISTORICO_ACESSO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TB_IB_HISTORICO_ACESSO].[ID_USUARIO] AS [ID_USUARIO], 
+    [TB_IB_HISTORICO_ACESSO].[DT_ACESSO] AS [DT_ACESSO]
+    FROM [dbo].[TB_IB_HISTORICO_ACESSO] AS [TB_IB_HISTORICO_ACESSO]</DefiningQuery>
+    </EntitySet>
   </EntityContainer>
 </Schema>

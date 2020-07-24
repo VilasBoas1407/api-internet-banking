@@ -26,5 +26,6 @@ namespace api_internet_banking.Models
         }
     
         public virtual DbSet<TB_IB_USUARIO> TB_IB_USUARIO { get; set; }
+        public virtual DbSet<TB_IB_HISTORICO_ACESSO> TB_IB_HISTORICO_ACESSO { get; set; }
     }
 }

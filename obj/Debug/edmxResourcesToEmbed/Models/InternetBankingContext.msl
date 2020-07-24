@@ -19,5 +19,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TB_IB_HISTORICO_ACESSO">
+      <EntityTypeMapping TypeName="DB_INTERNET_BANKINGModel.TB_IB_HISTORICO_ACESSO">
+        <MappingFragment StoreEntitySet="TB_IB_HISTORICO_ACESSO">
+          <ScalarProperty Name="DT_ACESSO" ColumnName="DT_ACESSO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

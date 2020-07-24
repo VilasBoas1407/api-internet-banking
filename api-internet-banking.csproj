@@ -115,6 +115,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\TB_IB_HISTORICO_ACESSO.cs">
+      <DependentUpon>InternetBankingContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Settings.cs" />
     <Compile Include="Controllers\apiLoginController.cs" />
     <Compile Include="Global.asax.cs">

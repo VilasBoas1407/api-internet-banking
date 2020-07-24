@@ -19,5 +19,14 @@
   </EntityType>
   <EntityContainer Name="DB_INTERNET_BANKINGEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TB_IB_USUARIO" EntityType="Self.TB_IB_USUARIO" />
+    <EntitySet Name="TB_IB_HISTORICO_ACESSO" EntityType="DB_INTERNET_BANKINGModel.TB_IB_HISTORICO_ACESSO" />
   </EntityContainer>
+  <EntityType Name="TB_IB_HISTORICO_ACESSO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+      <PropertyRef Name="DT_ACESSO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
+    <Property Name="DT_ACESSO" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
 </Schema>

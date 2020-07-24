@@ -12,10 +12,20 @@ namespace api_internet_banking.Models
         {
 
             TB_IB_USUARIO User = new TB_IB_USUARIO();
+            TB_IB_HISTORICO_ACESSO UserHist = new TB_IB_HISTORICO_ACESSO();
+
             User = db.TB_IB_USUARIO
                     .Where(
                         x => x.DS_EMAIL == DS_EMAIL && x.DS_SENHA == DS_SENHA
                     ).FirstOrDefault();
+
+            if(User != null)
+            {
+                UserHist.ID_USUARIO = User.ID_USUARIO;
+                UserHist.DT_ACESSO = DateTime.Now;
+                db.TB_IB_HISTORICO_ACESSO.Add(UserHist);
+                db.SaveChanges();
+            }
 
             return User;
 
